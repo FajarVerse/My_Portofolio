@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-white;
+}
+
+.hamburger-line {
+  @apply h-[2.5px] block bg-dark group-hover:scale-110 transition duration-300 ease-in-out;
+}
+
+.navbar-menu-list {
+  @apply relative font-semibold text-lg text-dark before:content-['.'] hover:text-accent hover:scale-105 transition ease-in-out duration-300 before:absolute before:-bottom-1 before:left-0 before:right-0 before:w-0 before:h-[2.5px] before:mx-auto before:text-transparent before:bg-accent hover:before:w-full before:transition-all before:duration-300 before:ease-out;
+}
+
+.light-nonactive {
+  @apply z-10 fill-transparent;
+}
+
+.dark-active {
+  @apply z-20 fill-primary;
+}
+
+.btn-dark-mode {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Sesuaikan tinggi gradien */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(240, 240, 240, 1) 100%);
+}
