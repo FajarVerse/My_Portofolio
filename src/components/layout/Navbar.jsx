@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import BtnDarkMode from "../fragments/btnDarkMode";
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-transparent absolute top-0 w-full">
+    <header className="bg-transparent fixed top-0 w-full z-50">
       <div className="container mx-auto">
         <div className="w-full px-4 py-4 flex justify-between items-center md:px-10 lg:px-20 lg:py-5 xl:px-24">
           <div className="w-[90%] h-full flex lg:justify-between lg:items-center">
@@ -26,16 +25,16 @@ const Navbar = () => {
             >
               <ul className="flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14">
                 <li className="navbar-menu-list">
-                  <Link>Home</Link>
+                  <a href="#home">Home</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <Link>About</Link>
+                  <a href="#about">About</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <Link>Portofolio</Link>
+                  <a>Portofolio</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <Link>Contact</Link>
+                  <a>Contact</a>
                 </li>
               </ul>
             </div>
