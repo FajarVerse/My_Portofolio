@@ -16,7 +16,7 @@ const BtnDarkMode = () => {
   };
 
   return (
-    <button className="relative w-10 h-10" onClick={darkModeOnClick}>
+    <button className="relative w-10 h-10 hover:scale-110 transition duration-300" onClick={darkModeOnClick}>
       <span className="btn-dark-mode fill-primary z-20" ref={lightModeRef}>
         <svg
           className="lg:w-8 lg:h-8"
