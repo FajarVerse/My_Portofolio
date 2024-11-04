@@ -11,7 +11,6 @@ const HeroBody = () => {
           developing clean and responsive web interfaces.
         </HeroDescription>
         <HeroBtn />
-        <HeroSosmed />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import HeroSosmedLink from "../../elements/heroSection/HeroSosmedLink";
+import HeroSosmedLink from "../../elements/SosmedLink";
 
 const HeroSosmed = () => {
   return (

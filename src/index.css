@@ -42,5 +42,13 @@
 }
 
 .sosmed-icon {
-  @apply p-2 rounded-full bg-primary text-white hover:scale-110 transition duration-300 ease-in-out;
+  @apply p-2 rounded-md bg-accent text-white hover:scale-105 transition duration-200 ease-out lg:px-3 lg:py-1.5 lg:flex lg:gap-2 lg:w-fit;
+}
+
+.sosmed-username {
+  @apply font-inter text-lg text-light leading-normal hidden lg:block lg:text-base xl:text-lg;
+}
+
+.skills-size {
+  @apply w-full h-full fill-current group-hover:scale-105 duration-300 ease-in-out lg:group-hover:scale-110;
 }
