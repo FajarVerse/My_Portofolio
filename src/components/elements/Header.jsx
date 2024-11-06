@@ -4,7 +4,7 @@ const Header = (props) => {
   return (
     <>
       <h1
-        className={`font-poppins font-bold text-[2.5rem] text-center text-primary md:text-5xl ${className}`}
+        className={`font-poppins font-bold text-[2.5rem] text-primary md:text-5xl ${className}`}
       >
         {children}
       </h1>

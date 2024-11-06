@@ -5,7 +5,9 @@ const AboutSosmed = () => {
   return (
     <>
       <div className="w-full lg:w-1/5">
-        <SubHeader className="lg:text-2xl xl:text-3xl">Find Me On</SubHeader>
+        <SubHeader className="text-primary lg:text-2xl xl:text-3xl">
+          Find Me On
+        </SubHeader>
         <div className="flex gap-5  lg:flex-col lg:gap-3 lg:w-fit">
           <SosmedLink platform="Github" username="GifariFajar">
             <svg

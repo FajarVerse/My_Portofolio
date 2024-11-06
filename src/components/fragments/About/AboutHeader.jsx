@@ -5,7 +5,7 @@ const AboutHeader = () => {
   return (
     <>
       <div className="w-full mb-5 lg:w-2/4 lg:absolute">
-        <Header className="lg:text-7xl lg:text-left lg:text-pretty lg:tracking-wide xl:text-8xl">
+        <Header className="text-center lg:text-7xl lg:text-left lg:text-pretty lg:tracking-wide xl:text-8xl">
           Get to Know Me Better
         </Header>
       </div>

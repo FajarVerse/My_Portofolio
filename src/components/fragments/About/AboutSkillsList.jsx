@@ -4,7 +4,7 @@ const AboutSkillsList = () => {
   return (
     <>
       <div className="w-full">
-        <SubHeader className="lg:text-2xl xl:text-3xl">My Skills</SubHeader>
+        <SubHeader className="text-primary lg:text-2xl xl:text-3xl">My Skills</SubHeader>
         <div className="mt-2 px-2 flex items-center gap-5 flex-wrap md:gap-7 lg:gap-5">
           <div className="w-11 text-slate-600 group md:w-12 lg:w-9 xl:w-10">
             <svg

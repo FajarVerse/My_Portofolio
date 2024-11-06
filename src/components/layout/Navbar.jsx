@@ -24,7 +24,10 @@ const Navbar = () => {
         <div className="w-full px-4 py-4 mx-auto flex justify-between items-center md:px-10 lg:px-20 lg:py-5 xl:px-24">
           <div className="w-[95%] h-full flex lg:justify-between lg:items-center">
             <div className="flex items-center z-50">
-              <a href="#" className="font-bold font-poppins text-2xl text-primary xl:text-3xl">
+              <a
+                href="#"
+                className="font-bold font-poppins text-2xl text-primary xl:text-3xl"
+              >
                 Fajar<span className="text-accent">Dev</span>
               </a>
             </div>
@@ -35,16 +38,16 @@ const Navbar = () => {
             >
               <ul className="flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14">
                 <li className="navbar-menu-list">
-                  <a href="#home">Home</a>
+                  <a href="#home">HOME</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <a href="#about">About</a>
+                  <a href="#about">ABOUT</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <a>Portofolio</a>
+                  <a href="#portfolio">PORTFOLIO</a>
                 </li>
                 <li className="navbar-menu-list">
-                  <a>Contact</a>
+                  <a>CONTACT</a>
                 </li>
               </ul>
             </div>

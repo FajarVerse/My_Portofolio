@@ -52,3 +52,7 @@
 .skills-size {
   @apply w-full h-full fill-current group-hover:scale-105 duration-300 ease-in-out lg:group-hover:scale-110;
 }
+
+.card-project-hover {
+  @apply before:content-['.'] before:text-transparent before:absolute before:mx-auto before:inset-0 before:w-full before:bg-light before:bg-opacity-0 before:backdrop-blur-0 hover:before:bg-opacity-10 hover:before:backdrop-blur-sm before:transition-all before:duration-500 before:ease-out;
+}
