@@ -53,6 +53,18 @@
   @apply w-full h-full fill-current group-hover:scale-105 duration-300 ease-in-out lg:group-hover:scale-110;
 }
 
+.card-on-hover:hover > :not(:hover) {
+  @apply blur-sm opacity-90;
+}
+
 .card-project-hover {
-  @apply before:content-['.'] before:text-transparent before:absolute before:mx-auto before:inset-0 before:w-full before:bg-light before:bg-opacity-0 before:backdrop-blur-0 hover:before:bg-opacity-10 hover:before:backdrop-blur-sm before:transition-all before:duration-500 before:ease-out;
+  @apply before:content-['.'] before:text-transparent before:absolute before:mx-auto before:inset-0 before:w-full before:bg-light before:bg-opacity-0 hover:before:bg-opacity-25 before:transition-all before:duration-500 before:ease-out;
+}
+
+.card-project-icon {
+  @apply w-8 h-8 translate-y-5 text-light opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 ease-bounce hover:text-accent hover:scale-110 cursor-pointer lg:w-9 lg:h-9;
+}
+
+.btn-card {
+  @apply relative font-inter font-medium text-sm text-light px-3 py-1 rounded-sm bg-accent hover:bg-transparent hover:font-semibold hover:text-primary transition duration-300 ease-in-out before:content-[''] before:absolute before:my-auto before:mx-auto before:inset-0 before:w-1/3 before:bg-transparent before:border-t-2 before:border-b-2 before:border-transparent hover:before:w-full hover:before:h-full before:hover:border-accent before:transition-all before:duration-500 before:ease-bounce before:delay-150 lg:text-base lg:px-4 lg:py-1.5 lg:rounded lg:before:border-t-[3px] lg:before:border-b-[3px];
 }
