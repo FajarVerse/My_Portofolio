@@ -46,7 +46,7 @@
 }
 
 .sosmed-username {
-  @apply font-inter text-lg text-light leading-normal hidden lg:block lg:text-base xl:text-lg;
+  @apply font-inter text-lg text-light leading-normal hidden lg:block lg:text-[0.8rem] xl:text-lg;
 }
 
 .skills-size {
@@ -74,5 +74,5 @@
 }
 
 .input-active {
- @apply ring-accent
+  @apply ring-accent;
 }

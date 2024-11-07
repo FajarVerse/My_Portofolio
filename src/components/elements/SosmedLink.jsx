@@ -5,7 +5,7 @@ const SosmedLink = (props) => {
 
   return (
     <>
-      <Link to={`/${link}`} className="sosmed-icon group flex">
+      <Link to={`/${link}`} className="sosmed-icon group flex items-center">
         <span>{children}</span>
         <span className="sosmed-username">{username}</span>
       </Link>
