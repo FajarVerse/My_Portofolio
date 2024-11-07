@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import SubHeader from "../elements/SubHeader";
+import LinkBtn from "../elements/LinkBtn";
 
 const CardProject = (props) => {
   const { children } = props;
 
   return (
     <>
-      <div className="w-full h-56 rounded-md shadow-md shadow-slate-500 overflow-hidden md:h-[14.5rem] lg:h-72 xl:h-[17rem] transition duration-300 ease-in">
+      <div className="w-full h-56 rounded-md shadow-md shadow-slate-500 overflow-hidden hover:scale-105 hover:shadow-lg hover:shadow-slate-400 md:h-[14.5rem] lg:h-72 xl:h-[17rem] transition duration-300 ease-out cursor-pointer">
         {children}
       </div>
     </>
@@ -23,20 +24,8 @@ const CardImage = (props) => {
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="h-full flex gap-5 justify-center items-center">
-          <span className="card-project-icon">
-            <svg
-              className="w-full h-full fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#ffffff"
-            >
-              <path d="M120-120v-240h80v104l124-124 56 56-124 124h104v80H120Zm480 0v-80h104L580-324l56-56 124 124v-104h80v240H600ZM324-580 200-704v104h-80v-240h240v80H256l124 124-56 56Zm312 0-56-56 124-124H600v-80h240v240h-80v-104L636-580Z" />
-            </svg>
-          </span>
           <span className="card-project-icon delay-200">
-            <Link to={link}>
+            <Link to={link} target="_blank">
               <svg
                 className="w-full h-full fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,14 +48,15 @@ const CardBody = (props) => {
 
   return (
     <>
-      <div className="w-full h-1/5 px-6 flex bg-light justify-between items-center">
-        <SubHeader className="text-primary mt-2 lg:font-bold">{children}</SubHeader>
-        <Link
-          to={link}
-          className="btn-card"
-        >
-          See More
-        </Link>
+      <div className="w-full h-1/5 px-3 py-3 flex bg-light justify-between items-center">
+        <div className="w-[70%] flex items-center">
+          <SubHeader className="text-primary text-[0.95rem] mt-2 md:text-[1.1rem] lg:font-semibold lg:text-xl xl:text-[1.2rem] text-nowrap">
+            {children}
+          </SubHeader>
+        </div>
+        <div className="w-2/6 flex justify-center items-center">
+          <LinkBtn link={link}>See More</LinkBtn>
+        </div>
       </div>
     </>
   );

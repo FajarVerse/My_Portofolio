@@ -58,11 +58,11 @@
 }
 
 .card-project-hover {
-  @apply before:content-['.'] before:text-transparent before:absolute before:mx-auto before:inset-0 before:w-full before:bg-light before:bg-opacity-0 hover:before:bg-opacity-25 before:transition-all before:duration-500 before:ease-out;
+  @apply before:content-['.'] before:text-transparent before:absolute before:mx-auto before:inset-0 before:w-full before:bg-slate-400 before:bg-opacity-0 hover:before:backdrop-blur-[1.5px] hover:before:bg-opacity-30 before:transition-all before:duration-500 before:ease-out;
 }
 
 .card-project-icon {
-  @apply w-8 h-8 translate-y-5 text-light opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 ease-bounce hover:text-accent hover:scale-110 cursor-pointer lg:w-9 lg:h-9;
+  @apply w-8 h-8 translate-y-5 text-light opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500 ease-bounce hover:text-accent hover:scale-110 cursor-pointer lg:w-10 lg:h-10;
 }
 
 .btn-card {
