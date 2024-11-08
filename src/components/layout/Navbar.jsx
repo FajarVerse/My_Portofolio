@@ -6,7 +6,7 @@ const Navbar = () => {
   const HeaderRef = useRef(null);
 
   const menuOnClick = () => {
-    navabarMenuRef.current.classList.toggle("hidden");
+    navabarMenuRef.current.classList.toggle("nav-active");
   };
 
   window.onscroll = function () {
@@ -24,13 +24,16 @@ const Navbar = () => {
         <div className="w-full px-4 py-4 mx-auto flex justify-between items-center md:px-10 lg:px-20 lg:py-5 xl:px-24">
           <div className="w-[95%] h-full flex lg:justify-between lg:items-center">
             <div className="flex items-center z-50">
-              <a href="#" className="font-bold font-poppins text-2xl text-primary xl:text-3xl">
+              <a
+                href="#"
+                className="font-bold font-poppins text-2xl text-primary xl:text-3xl"
+              >
                 Fajar<span className="text-accent">Dev</span>
               </a>
             </div>
 
             <div
-              className="hidden absolute right-5 top-14 px-10 py-5 rounded-md bg-light shadow-md shadow-slate-400 md:right-12 lg:relative lg:right-0 lg:top-0 lg:p-0 lg:shadow-none lg:block lg:bg-transparent z-50"
+              className="invisible opacity-0 absolute right-5 top-24 px-10 py-5 rounded-md bg-light shadow-md shadow-slate-400 md:right-12 lg:relative lg:right-0 lg:top-0 lg:p-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce"
               ref={navabarMenuRef}
             >
               <ul className="flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14">
