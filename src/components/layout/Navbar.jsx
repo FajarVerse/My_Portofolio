@@ -6,7 +6,7 @@ const Navbar = () => {
   const HeaderRef = useRef(null);
 
   const menuOnClick = () => {
-    navabarMenuRef.current.classList.toggle("hidden");
+    navabarMenuRef.current.classList.toggle("nav-active");
   };
 
   window.onscroll = function () {
@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className="hidden absolute right-5 top-14 px-10 py-5 rounded-md bg-light shadow-md shadow-slate-400 md:right-12 lg:relative lg:right-0 lg:top-0 lg:p-0 lg:shadow-none lg:block lg:bg-transparent z-50"
+              className="invisible opacity-0 absolute right-5 top-24 px-10 py-5 rounded-md bg-light shadow-md shadow-slate-400 md:right-12 lg:relative lg:right-0 lg:top-0 lg:-translate-y-0 lg:visible lg:opacity-100 lg:p-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce"
               ref={navabarMenuRef}
             >
               <ul className="flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14">

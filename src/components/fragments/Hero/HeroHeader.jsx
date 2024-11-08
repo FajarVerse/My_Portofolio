@@ -25,7 +25,7 @@ const HeroHeader = () => {
           </svg>
         </span>
       </div>
-      <div className="relative mx-auto w-60 image-container md:w-80 lg:w-[22rem] lg:absolute lg:-bottom-10 lg:left-1/2 lg:-translate-x-1/2 lg:z-30 xl:w-[26rem]">
+      <div className="relative mx-auto w-60 image-container md:w-80 lg:w-[24rem] lg:absolute lg:-bottom-10 lg:left-1/2 lg:-translate-x-1/2 lg:z-30 xl:w-[27.5rem]">
         <img src={my_photo1} alt="" className="w-full relative mx-auto" />
       </div>
     </>
