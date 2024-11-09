@@ -1,6 +1,6 @@
 import AnimasiFadeZoom from "../../elements/AnimasiFadeZoom";
 import Description from "../../elements/Description";
-import Input from "../../elements/input";
+import Input from "../../elements/Input";
 import TextArea from "../../elements/TextArea";
 
 const ContactForm = () => {
