@@ -28,7 +28,7 @@ const Navbar = () => {
                 href="#"
                 className="font-bold font-poppins text-2xl text-primary xl:text-3xl"
               >
-                Fajar<span className="text-accent">Dev</span>
+                Fajar<span className="text-accent">Verse</span>
               </a>
             </div>
 
