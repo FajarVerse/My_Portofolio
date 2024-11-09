@@ -5,6 +5,7 @@ const AuthLayout = (props) => {
     <>
       <section id={id} className={`pt-24 pb-10 ${sectionClass}`}>
         <div className={`container mx-auto ${containerClass}`}>{children}</div>
+
       </section>
     </>
   );

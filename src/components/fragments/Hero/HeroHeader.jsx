@@ -1,14 +1,22 @@
 import HeroSubTilte from "../../elements/heroSection/HeroSubTitle";
 import HeroTitle from "../../elements/heroSection/HeroTitle";
 import my_photo1 from "../../../assets/image/my_photo/photo_1.png";
+import { motion } from "framer-motion";
+import { fadeIn, fadeZoom } from "../../../assets/animasi/variants";
 
 const HeroHeader = () => {
   return (
     <>
-      <div className="w-full relative mb-5 text-center z-10 lg:w-1/2 lg:flex lg:flex-col lg:justify-end lg:text-left lg:pb-48 xl:pl-2">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="w-full relative mb-5 text-center z-10 lg:w-1/2 lg:flex lg:flex-col lg:justify-end lg:text-left lg:pb-48 xl:pl-2"
+      >
         <HeroSubTilte>I'm</HeroSubTilte>
         <HeroTitle>Gifari Fajar Maulana</HeroTitle>
-      </div>
+      </motion.div>
       <div className="hidden lg:block lg:absolute lg:top-72 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-0 xl:scale-125 xl:top-64 2xl:top-80">
         <span>
           <svg
@@ -26,7 +34,15 @@ const HeroHeader = () => {
         </span>
       </div>
       <div className="relative mx-auto w-60 image-container md:w-80 lg:w-[24rem] lg:absolute lg:-bottom-10 lg:left-1/2 lg:-translate-x-1/2 lg:z-30 xl:w-[27.5rem]">
-        <img src={my_photo1} alt="" className="w-full relative mx-auto" />
+        <motion.div
+          variants={fadeZoom( 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="w-full relative mx-auto"
+        >
+          <img src={my_photo1} alt="" className="w-full relative mx-auto" />
+        </motion.div>
       </div>
     </>
   );

@@ -7,7 +7,7 @@ const AboutBody = () => {
     <>
       <div className="w-full block lg:flex lg:items-start lg:gap-5">
         <AboutSosmed />
-        <div className="w-full mt-5 block lg:w-4/5 lg:flex lg:gap-5">
+        <div className="w-full block lg:w-4/5 lg:flex lg:gap-5">
           <AboutBiography />
           <AboutSkill />
         </div>

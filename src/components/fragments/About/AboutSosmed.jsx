@@ -1,14 +1,23 @@
+import { fadeIn } from "../../../assets/animasi/variants";
 import SosmedLink from "../../elements/SosmedLink";
 import SubHeader from "../../elements/SubHeader";
+import { motion } from "framer-motion";
 
 const AboutSosmed = () => {
   return (
     <>
       <div className="w-full lg:w-1/5">
-        <SubHeader className="text-primary lg:text-2xl xl:text-3xl">
-          Find Me On
-        </SubHeader>
-        <div className="flex gap-5  lg:flex-col lg:gap-3 lg:w-fit">
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+        >
+          <SubHeader className="text-primary lg:text-2xl xl:text-3xl">
+            Find Me On
+          </SubHeader>
+        </motion.div>
+        <div className="flex gap-4 px-3 mb-3 lg:px-0 lg:mb-0 lg:flex-col lg:gap-3 lg:w-fit">
           <SosmedLink platform="Github" username="GifariFajar">
             <svg
               className="fill-current md:w-6 lg:w-6 xl:w-6"

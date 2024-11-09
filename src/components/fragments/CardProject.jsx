@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SubHeader from "../elements/SubHeader";
 import LinkBtn from "../elements/LinkBtn";
+import { motion } from "framer-motion";
+import { fadeIn, fadeZoom } from "../../assets/animasi/variants";
 
 const CardProject = (props) => {
   const { children } = props;

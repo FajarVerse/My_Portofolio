@@ -1,13 +1,21 @@
+import { fadeIn } from "../../../assets/animasi/variants";
 import Header from "../../elements/Header";
+import { motion } from "framer-motion";
 
 const PortfolioHeader = () => {
   return (
     <>
-      <div className="w-full">
-        <Header className="text-left lg:text-6xl xl:text-7xl">
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="w-full"
+      >
+        <Header className="text-center lg:text-6xl xl:text-7xl">
           Latest Projects
         </Header>
-      </div>
+      </motion.div>
     </>
   );
 };
