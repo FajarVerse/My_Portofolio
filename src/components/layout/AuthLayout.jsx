@@ -3,7 +3,7 @@ const AuthLayout = (props) => {
 
   return (
     <>
-      <section id={id} className={`pt-24 pb-10 overflow-x-hidden ${sectionClass}`}>
+      <section id={id} className={`pt-24 pb-10 ${sectionClass}`}>
         <div className={`container mx-auto ${containerClass}`}>{children}</div>
       </section>
     </>
