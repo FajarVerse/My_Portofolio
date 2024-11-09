@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .nav-active {
-  @apply opacity-100 -translate-y-9;
+  @apply opacity-100 -translate-y-9 visible;
 }
 
 .header-fixed {
-  @apply fixed z-[999] bg-light bg-opacity-75 backdrop-blur-sm shadow-[inset_0_-2px_0_0_rgba(0,0,0,.1)];
+  @apply fixed bg-light bg-opacity-75 backdrop-blur-sm shadow-[inset_0_-2px_0_0_rgba(0,0,0,.1)];
 }
 
 .hamburger-line {
-  @apply h-[2.5px] block bg-primary;
+  @apply h-[2.5px] block bg-primary group-hover:scale-110 transition duration-300 ease-in-out;
 }
 
 .navbar-menu-list {
@@ -28,10 +28,6 @@
 
 .btn-dark-mode {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
-}
-
-.btn-top-active {
-  @apply -translate-y-3 opacity-100;
 }
 
 .image-container::after {
