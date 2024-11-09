@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import BtnDarkMode from "../fragments/btnDarkMode";
+import BtnDarkMode from "../fragments/BtnDarkMode";
 
 const Navbar = () => {
   const navabarMenuRef = useRef(null);
