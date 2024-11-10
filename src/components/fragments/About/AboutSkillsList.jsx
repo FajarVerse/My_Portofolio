@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { fade, fadeIn } from "../../../assets/animasi/variants";
 import SubHeader from "../../elements/SubHeader";
 import { motion } from "framer-motion";
+import { DarkMode } from "../../../assets/context/DarkModeContext";
 
 const AboutSkillsList = () => {
+  const { darkMode } = useContext(DarkMode);
+
   return (
     <>
       <div className="w-full">
@@ -12,7 +16,11 @@ const AboutSkillsList = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
         >
-          <SubHeader className="text-primary lg:text-2xl xl:text-3xl">
+          <SubHeader
+            className={`${
+              darkMode ? "text-accent" : "text-primary"
+            } lg:text-2xl xl:text-3x`}
+          >
             My Skills
           </SubHeader>
         </motion.div>
@@ -22,7 +30,9 @@ const AboutSkillsList = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
-            className="w-11 text-slate-600 group md:w-12 lg:w-9 xl:w-10"
+            className={`w-11 ${
+              darkMode ? "text-gray-400" : "text-slate-600"
+            } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
               className="skills-size group-hover:fill-[#E34F26]"
@@ -39,7 +49,9 @@ const AboutSkillsList = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
-            className="w-11 text-slate-600 group md:w-12 lg:w-9 xl:w-10"
+            className={`w-11 ${
+              darkMode ? "text-gray-400" : "text-slate-600"
+            } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
               className="skills-size group-hover:fill-[#1572B6]"
@@ -56,7 +68,9 @@ const AboutSkillsList = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
-            className="w-11 text-slate-600 group md:w-12 lg:w-9 xl:w-10"
+            className={`w-11 ${
+              darkMode ? "text-gray-400" : "text-slate-600"
+            } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
               className="skills-size group-hover:fill-[#F7DF1E]"
@@ -73,7 +87,9 @@ const AboutSkillsList = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
-            className="w-14 text-slate-600 group md:w-16 lg:w-11 xl:w-12"
+            className={`w-14 ${
+              darkMode ? "text-gray-400" : "text-slate-600"
+            } group md:w-16 lg:w-11 xl:w-12`}
           >
             <svg
               className="skills-size group-hover:fill-[#06B6D4]"
@@ -90,7 +106,9 @@ const AboutSkillsList = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.7 }}
-            className="w-12 text-slate-600 group md:w-14 lg:w-10 xl:w-12"
+            className={`w-12 ${
+              darkMode ? "text-gray-400" : "text-slate-600"
+            } group md:w-14 lg:w-10 xl:w-12`}
           >
             <svg
               className="skills-size group-hover:fill-[#61DAFB]"

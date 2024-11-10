@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { fadeIn } from "../../../assets/animasi/variants";
 import SosmedLink from "../../elements/SosmedLink";
 import SubHeader from "../../elements/SubHeader";
 import { motion } from "framer-motion";
+import { DarkMode } from "../../../assets/context/DarkModeContext";
 
 const AboutSosmed = () => {
+  const { darkMode } = useContext(DarkMode);
+
   return (
     <>
       <div className="w-full lg:w-1/5">
@@ -13,7 +17,11 @@ const AboutSosmed = () => {
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
         >
-          <SubHeader className="text-primary lg:text-2xl xl:text-3xl">
+          <SubHeader
+            className={`${
+              darkMode ? "text-accent" : "text-primary"
+            } lg:text-2xl xl:text-3xl`}
+          >
             Find Me On
           </SubHeader>
         </motion.div>
