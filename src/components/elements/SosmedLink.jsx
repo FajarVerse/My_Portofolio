@@ -18,7 +18,8 @@ const SosmedLink = (props) => {
         viewport={{ once: false, amount: 0.7 }}
       >
         <Link
-          to={`/${link}`}
+          to={`${link}`}
+          target="_blank"
           className={`${
             darkMode
               ? "sosmed-icon-dark hover:ring-1 hover:ring-light"

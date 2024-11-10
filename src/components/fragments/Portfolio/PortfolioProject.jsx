@@ -14,7 +14,7 @@ const PortfolioProject = () => {
               image={project_1}
               link="https://fajardev-questforgame-1-5.vercel.app/"
             />
-            <CardProject.CardBody link="https://github.com/Gifarfajar321/QuestForGame-1.5">
+            <CardProject.CardBody link="https://github.com/FajarVerse/QuestForGame-1.5">
               QuestForGame 1.5
             </CardProject.CardBody>
           </CardProject>
@@ -26,7 +26,7 @@ const PortfolioProject = () => {
               image={project_2}
               link="https://streaming-app-clone-pi.vercel.app/"
             />
-            <CardProject.CardBody link="https://github.com/Gifarfajar321/streaming-app-clone">
+            <CardProject.CardBody link="https://github.com/FajarVerse/streaming-app-clone">
               Streaming App Clone
             </CardProject.CardBody>
           </CardProject>
@@ -36,9 +36,9 @@ const PortfolioProject = () => {
           <CardProject>
             <CardProject.CardImage
               image={project_3}
-              link="https://gifarfajar321.github.io/WalkInSTyle-Website.0.1/#menu"
+              link="https://fajarverse.github.io/WalkInSTyle-Website.0.1/#menu"
             />
-            <CardProject.CardBody link="https://github.com/Gifarfajar321/WalkInSTyle-Website.0.1">
+            <CardProject.CardBody link="https://github.com/FajarVerse/WalkInSTyle-Website.0.1">
               Landing Page Web
             </CardProject.CardBody>
           </CardProject>

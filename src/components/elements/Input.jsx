@@ -10,7 +10,7 @@ const Input = (props) => {
   const handleInputFocus = () => {
     if (darkMode) {
       labelRef.current.classList.add("input-placeholder-active-dark");
-    } else{
+    } else {
       labelRef.current.classList.add("input-placeholder-active-light");
     }
 
@@ -38,7 +38,9 @@ const Input = (props) => {
         onBlur={handleInputBlur}
       >
         <span
-          className={`font-inter font-light text-sm  px-0.5 bg-transparent absolute top-1/2 left-4 -translate-y-1/2 transition-all duration-300 z-0 ${darkMode ? "text-slate-200" : "text-slate-400"}`}
+          className={`font-inter font-light text-sm  px-0.5 bg-transparent absolute top-1/2 left-4 -translate-y-1/2 transition-all duration-300 z-0 ${
+            darkMode ? "text-slate-200" : "text-slate-400"
+          }`}
           ref={labelRef}
         >
           {placeHolder}
@@ -47,7 +49,9 @@ const Input = (props) => {
           type={inpuType}
           id={id}
           required
-          className="w-full text-sm text-slate-600 px-5 py-2 ring-1 bg-transparent ring-slate-400 rounded-md outline-none relative z-20"
+          className={`${
+            darkMode ? "text-second" : "text-slate-600"
+          } w-full text-sm px-5 py-2 ring-1 bg-transparent ring-slate-400 rounded-md outline-none relative z-20`}
           ref={inputRef}
         />
       </label>

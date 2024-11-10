@@ -35,7 +35,7 @@ const AboutSkillsList = () => {
             } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
-              className="skills-size group-hover:fill-[#E34F26]"
+              className="skills-size transition-all duration-300 ease-bounce group-hover:fill-[#E34F26]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const AboutSkillsList = () => {
             } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
-              className="skills-size group-hover:fill-[#1572B6]"
+              className="skills-size transition-all duration-300 ease-bounce group-hover:fill-[#1572B6]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const AboutSkillsList = () => {
             } group md:w-12 lg:w-9 xl:w-10`}
           >
             <svg
-              className="skills-size group-hover:fill-[#F7DF1E]"
+              className="skills-size transition-all duration-300 ease-bounce group-hover:fill-[#F7DF1E]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const AboutSkillsList = () => {
             } group md:w-16 lg:w-11 xl:w-12`}
           >
             <svg
-              className="skills-size group-hover:fill-[#06B6D4]"
+              className="skills-size transition-all duration-300 ease-bounce group-hover:fill-[#06B6D4]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ const AboutSkillsList = () => {
             } group md:w-14 lg:w-10 xl:w-12`}
           >
             <svg
-              className="skills-size group-hover:fill-[#61DAFB]"
+              className="skills-size transition-all duration-300 ease-bounce group-hover:fill-[#61DAFB]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"

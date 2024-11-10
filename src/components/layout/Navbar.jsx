@@ -45,12 +45,16 @@ const Navbar = () => {
 
             <div
               className={`${
-                darkMode ? "shadow-slate-200" : "shadow-slate-400"
-              } invisible opacity-0 absolute right-5 top-24 px-10 py-5 bg-light rounded-md shadow-md md:right-12 lg:relative lg:right-0 lg:top-0 lg:-translate-y-0 lg:visible lg:opacity-100 lg:p-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce`}
+                darkMode
+                  ? "bg-mode ring-gray-300 shadow-gray-400"
+                  : "bg-light ring-gray-400 shadow-slate-400"
+              } ring-1 invisible opacity-0 absolute right-5 top-24 px-10 py-5 rounded-md shadow-md md:right-12 lg:relative lg:right-0 lg:top-0 lg:-translate-y-0 lg:visible lg:opacity-100 lg:p-0 lg:ring-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce`}
               ref={navabarMenuRef}
             >
               <ul
-                className={`${darkMode ? "text-light" : "text-primary"} flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14`}
+                className={`${
+                  darkMode ? "text-light" : "text-primary"
+                } flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14`}
               >
                 <li className="navbar-menu-list">
                   <a href="#home">HOME</a>

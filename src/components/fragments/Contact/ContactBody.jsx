@@ -7,8 +7,7 @@ import { useContext } from "react";
 import { DarkMode } from "../../../assets/context/DarkModeContext";
 
 const ContactBody = () => {
-  const {darkMode} = useContext(DarkMode)
-
+  const { darkMode } = useContext(DarkMode);
 
   return (
     <>
@@ -25,12 +24,22 @@ const ContactBody = () => {
         <div className="w-full">
           <ul className="mb-3">
             <li
-              className={`font-inter font-light text-sm ${darkMode ? 'text-light' : 'text-dark'}  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}
+              className={`font-inter font-light text-sm ${
+                darkMode ? "text-light" : "text-dark"
+              }  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}
             >
-              <Link className="">gifarifajar794@gmail.com</Link>
+              <Link to={"mailto:gifarifajar794@gmail.com"} className="">
+                gifarifajar794@gmail.com
+              </Link>
             </li>
-            <li className={`font-inter font-light text-sm ${darkMode ? 'text-light' : 'text-dark'}  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}>
-              <Link className="">0838-9492-7117</Link>
+            <li
+              className={`font-inter font-light text-sm ${
+                darkMode ? "text-light" : "text-dark"
+              }  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}
+            >
+              <Link to={`https://wa.me/083894079797`} className="">
+                0838-9492-7117
+              </Link>
             </li>
           </ul>
           <Button>

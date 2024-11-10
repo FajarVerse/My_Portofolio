@@ -81,7 +81,7 @@
 }
 
 .skills-size {
-  @apply w-full h-full fill-current group-hover:scale-105 duration-300 ease-in-out lg:group-hover:scale-110;
+  @apply w-full h-full fill-current group-hover:scale-105 ease-in-out lg:group-hover:scale-125;
 }
 
 .card-on-hover:hover > :not(:hover) {

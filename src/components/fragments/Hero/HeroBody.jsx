@@ -25,7 +25,7 @@ const HeroBody = () => {
         <a href="#about">
           <Button>
             Show More{" "}
-            <span>
+            <span className="group-hover:rotate-90 transition-transform duration-200 ease-in-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"

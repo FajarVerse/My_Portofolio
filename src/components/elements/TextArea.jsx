@@ -1,22 +1,31 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { DarkMode } from "../../assets/context/DarkModeContext";
 
 const TextArea = (props) => {
   const { id, placeHolder } = props;
   const labelRef = useRef(null);
   const inputRef = useRef(null);
+  const { darkMode } = useContext(DarkMode);
 
   const handleInputFocus = () => {
-    labelRef.current.classList.add("input-placeholder-active");
-    inputRef.current.classList.add("ring-accent");
+    if (darkMode) {
+      labelRef.current.classList.add("input-placeholder-active-dark");
+    } else {
+      labelRef.current.classList.add("input-placeholder-active-light");
+    }
+
+    inputRef.current.classList.add("input-active");
   };
 
   const handleInputBlur = () => {
     if (inputRef.current.value == "") {
-      labelRef.current.classList.remove("input-placeholder-active");
-      inputRef.current.classList.remove("ring-accent");
+      labelRef.current.classList.remove("input-placeholder-active-dark");
+      labelRef.current.classList.remove("input-placeholder-active-light");
+      inputRef.current.classList.remove("input-active");
     } else if (inputRef.current.value != "") {
-      labelRef.current.classList.add("input-placeholder-active");
-      inputRef.current.classList.add("ring-accent");
+      labelRef.current.classList.add("input-placeholder-active-dark");
+      labelRef.current.classList.add("input-placeholder-active-light");
+      inputRef.current.classList.add("input-active");
     }
   };
 
@@ -36,7 +45,9 @@ const TextArea = (props) => {
         </span>
         <textarea
           id={id}
-          className="w-full h-20 text-sm text-slate-600 px-5 py-2 ring-1 bg-transparent ring-slate-400 rounded-md outline-none relative z-20"
+          className={`${
+            darkMode ? "text-second" : "text-slate-600"
+          } w-full h-20 text-sm px-5 py-2 ring-1 bg-transparent ring-slate-400 rounded-md outline-none relative z-20`}
           ref={inputRef}
         />
       </label>
