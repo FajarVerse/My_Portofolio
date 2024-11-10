@@ -1,15 +1,22 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import SubHeader from "../elements/SubHeader";
+import { DarkMode } from "../../assets/context/DarkModeContext";
 import LinkBtn from "../elements/LinkBtn";
-import { motion } from "framer-motion";
-import { fadeIn, fadeZoom } from "../../assets/animasi/variants";
+import SubHeader from "../elements/SubHeader";
 
 const CardProject = (props) => {
   const { children } = props;
+  const { darkMode } = useContext(DarkMode);
 
   return (
     <>
-      <div className="w-full h-56 rounded-md shadow-md shadow-slate-500 overflow-hidden hover:scale-105 hover:shadow-lg hover:shadow-slate-400 md:h-[14.5rem] lg:h-72 xl:h-[17rem] transition duration-300 ease-out cursor-pointer">
+      <div
+        className={`w-full h-56 rounded-md shadow-md  overflow-hidden ring-1 hover:scale-105 hover:shadow-lg  md:h-[14.5rem] lg:h-72 xl:h-[17rem] transition duration-300 ease-out cursor-pointer ${
+          darkMode
+            ? "ring-gray-600 shadow-gray-800 hover:shadow-gray-700"
+            : "ring-[rgba(18,18,18,0.4)] shadow-slate-500 hover:shadow-slate-400"
+        }`}
+      >
         {children}
       </div>
     </>
@@ -18,11 +25,14 @@ const CardProject = (props) => {
 
 const CardImage = (props) => {
   const { image, link } = props;
+  const { darkMode } = useContext(DarkMode);
 
   return (
     <>
       <div
-        className="relative w-full h-4/5 bg-cover card-project-hover group"
+        className={`relative w-full h-4/5 bg-cover group ${
+          darkMode ? "card-project-hover-dark" : "card-project-hover-light"
+        }`}
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="h-full flex gap-5 justify-center items-center">
@@ -47,12 +57,21 @@ const CardImage = (props) => {
 
 const CardBody = (props) => {
   const { link, children } = props;
+  const { darkMode } = useContext(DarkMode);
 
   return (
     <>
-      <div className="w-full h-1/5 px-3 py-3 flex bg-light justify-between items-center">
+      <div
+        className={`w-full h-1/5 px-3 py-3 flex ${
+          darkMode ? "bg-mode" : "bg-light"
+        } justify-between items-center`}
+      >
         <div className="w-[70%] flex items-center">
-          <SubHeader className="text-primary text-[0.95rem] mt-2 md:text-[1.1rem] lg:font-semibold lg:text-xl xl:text-[1.2rem] text-nowrap">
+          <SubHeader
+            className={`${
+              darkMode ? "text-light" : "text-primary"
+            } text-[0.95rem] mt-2 md:text-[1.1rem] lg:font-semibold lg:text-xl xl:text-[1.2rem] text-nowrap`}
+          >
             {children}
           </SubHeader>
         </div>

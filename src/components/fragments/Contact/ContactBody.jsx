@@ -3,8 +3,13 @@ import Description from "../../elements/Description";
 import Header from "../../elements/Header";
 import Button from "../../elements/Button";
 import AnimasiFadeIn from "../../elements/AnimasiFadeIn";
+import { useContext } from "react";
+import { DarkMode } from "../../../assets/context/DarkModeContext";
 
 const ContactBody = () => {
+  const {darkMode} = useContext(DarkMode)
+
+
   return (
     <>
       <AnimasiFadeIn varian="left" delay={0.2}>
@@ -19,10 +24,12 @@ const ContactBody = () => {
       <AnimasiFadeIn varian="right" delay={0.2}>
         <div className="w-full">
           <ul className="mb-3">
-            <li className="font-inter font-light text-sm text-dark lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300">
+            <li
+              className={`font-inter font-light text-sm ${darkMode ? 'text-light' : 'text-dark'}  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}
+            >
               <Link className="">gifarifajar794@gmail.com</Link>
             </li>
-            <li className="font-inter font-light text-sm text-dark lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300">
+            <li className={`font-inter font-light text-sm ${darkMode ? 'text-light' : 'text-dark'}  lg:font-medium lg:text-lg lg:mb-1.5 hover:text-accent transition duration-300`}>
               <Link className="">0838-9492-7117</Link>
             </li>
           </ul>

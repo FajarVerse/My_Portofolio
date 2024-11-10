@@ -1,15 +1,21 @@
+import { useContext } from "react";
 import AnimasiFadeZoom from "../../elements/AnimasiFadeZoom";
 import Description from "../../elements/Description";
 import Input from "../../elements/Input";
 import TextArea from "../../elements/TextArea";
+import { DarkMode } from "../../../assets/context/DarkModeContext";
 
 const ContactForm = () => {
+  const { darkMode } = useContext(DarkMode);
+
   return (
     <>
       <AnimasiFadeZoom delay={0.2}>
         <form
           action=""
-          className="w-full px-5 py-5 shadow-md shadow-slate-500 rounded-lg md:px-8 lg:px-5"
+          className={` w-full px-5 py-5 shadow-md shadow-slate-500 ring-1 rounded-lg md:px-8 lg:px-5 ${
+            darkMode ? "ring-gray-600" : "ring-[rgba(18,18,18,0.4)]"
+          }`}
         >
           <legend className="font-inter font-semibold text-3xl text-accent md:text-5xl lg:mb-2 xl:font-bold">
             Get in Touch
