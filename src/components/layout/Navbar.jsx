@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import BtnDarkMode from "../fragments/BtnDarkMode";
+import { DarkMode } from "../../assets/context/DarkModeContext";
 
 const Navbar = () => {
   const navabarMenuRef = useRef(null);
   const HeaderRef = useRef(null);
+  const { darkMode } = useContext(DarkMode);
 
   const menuOnClick = () => {
     navabarMenuRef.current.classList.toggle("nav-active");
@@ -12,9 +14,16 @@ const Navbar = () => {
   window.onscroll = function () {
     const fixNavbar = HeaderRef.current.offsetTop;
     if (window.scrollY > fixNavbar) {
-      HeaderRef.current.classList.add("header-fixed");
+      if (darkMode) {
+        HeaderRef.current.classList.add("header-fixed-dark");
+        HeaderRef.current.classList.remove("header-fixed-light");
+      } else {
+        HeaderRef.current.classList.remove("header-fixed-dark");
+        HeaderRef.current.classList.add("header-fixed-light");
+      }
     } else {
-      HeaderRef.current.classList.remove("header-fixed");
+      HeaderRef.current.classList.remove("header-fixed-dark");
+      HeaderRef.current.classList.remove("header-fixed-light");
     }
   };
 
@@ -26,17 +35,23 @@ const Navbar = () => {
             <div className="flex items-center z-50">
               <a
                 href="#"
-                className="font-bold font-poppins text-2xl text-primary xl:text-3xl"
+                className={`font-bold font-poppins text-2xl xl:text-3xl ${
+                  darkMode ? "text-light" : "text-primary"
+                }`}
               >
                 Fajar<span className="text-accent">Verse</span>
               </a>
             </div>
 
             <div
-              className="invisible opacity-0 absolute right-5 top-24 px-10 py-5 rounded-md bg-light shadow-md shadow-slate-400 md:right-12 lg:relative lg:right-0 lg:top-0 lg:-translate-y-0 lg:visible lg:opacity-100 lg:p-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce"
+              className={`${
+                darkMode ? "shadow-slate-200" : "shadow-slate-400"
+              } invisible opacity-0 absolute right-5 top-24 px-10 py-5 bg-light rounded-md shadow-md md:right-12 lg:relative lg:right-0 lg:top-0 lg:-translate-y-0 lg:visible lg:opacity-100 lg:p-0 lg:shadow-none lg:block lg:bg-transparent transition-all duration-500 ease-bounce`}
               ref={navabarMenuRef}
             >
-              <ul className="flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14">
+              <ul
+                className={`${darkMode ? "text-light" : "text-primary"} flex flex-col gap-5 items-center lg:flex-row lg:gap-12 xl:gap-14`}
+              >
                 <li className="navbar-menu-list">
                   <a href="#home">HOME</a>
                 </li>
@@ -60,9 +75,21 @@ const Navbar = () => {
               className="flex flex-col items-end gap-1.5 group lg:hidden"
               onClick={menuOnClick}
             >
-              <span className="w-8 hamburger-line"></span>
-              <span className="w-7 hamburger-line"></span>
-              <span className="w-6 hamburger-line"></span>
+              <span
+                className={`w-8 ${
+                  darkMode ? "hamburger-line-dark" : "hamburger-line-light"
+                }`}
+              ></span>
+              <span
+                className={`w-8 ${
+                  darkMode ? "hamburger-line-dark" : "hamburger-line-light"
+                }`}
+              ></span>
+              <span
+                className={`w-8 ${
+                  darkMode ? "hamburger-line-dark" : "hamburger-line-light"
+                }`}
+              ></span>
             </button>
           </div>
         </div>

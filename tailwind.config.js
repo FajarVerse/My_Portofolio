@@ -15,6 +15,7 @@ export default {
         dark: "#00071B",
         light: "#FFFFFF",
         second: "#F0F0F0",
+        mode: "#121212",
       },
       transitionTimingFunction: {
         bounce: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",

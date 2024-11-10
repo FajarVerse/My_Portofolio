@@ -1,8 +1,12 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { DarkMode } from "../../assets/context/DarkModeContext";
 
 const BtnDarkMode = () => {
   const lightModeRef = useRef(null);
   const darkModeRef = useRef(null);
+  const { darkMode, setDarkMode } = useContext(DarkMode);
+  console.log(darkMode)
+
   const darkModeOnClick = () => {
     if (lightModeRef.current.classList.contains("z-20")) {
       lightModeRef.current.classList.remove("z-20");
@@ -16,8 +20,14 @@ const BtnDarkMode = () => {
   };
 
   return (
-    <button className="relative w-10 h-10 hover:scale-110 transition duration-300" onClick={darkModeOnClick}>
-      <span className="btn-dark-mode fill-primary z-20" ref={lightModeRef}>
+    <button
+      className="relative w-10 h-10 hover:scale-110 transition duration-300"
+      onClick={() => {
+        darkModeOnClick();
+        setDarkMode(!darkMode);
+      }}
+    >
+      <span className="btn-dark-mode fill-light z-20" ref={lightModeRef}>
         <svg
           className="lg:w-8 lg:h-8"
           xmlns="http://www.w3.org/2000/svg"
