@@ -13,9 +13,10 @@ const AboutBiography = () => {
           viewport={{ once: false, amount: 0.7 }}
         >
           <Description className="lg:font-medium lg:text-sm xl:text-base 2xl:text-lg">
-            Hi, I`m Gifari Fajar Maulana, Junior Front End Web Developer who is
-            very interested in creating clean and neat web interfaces. I am a
-            third semester student at the Jakarta LP3i Polytechnic.
+            Hai, saya Gifari Fajar Maulana, Junior Front End Web Developer yang
+            sangat tertarik untuk membuat antarmuka website yang interaktif dan
+            responsive. Saya seorang mahasiswa semester tiga Politeknik LP3i
+            Jakarta.
           </Description>
         </motion.div>
         <motion.div
@@ -25,10 +26,10 @@ const AboutBiography = () => {
           viewport={{ once: false, amount: 0.7 }}
         >
           <Description className="lg:font-medium lg:text-sm xl:text-base 2xl:text-lg">
-            I am very interested and always curious about technological
-            developments. I want to continue learning about technological
-            developments and also aspire to implement creative ideas that can
-            solve real problems.
+            Saya sangat tertarik dan selalu ingin tahu tentang perkembangan
+            teknologi. Saya ingin terus belajar tentang perkembangan teknologi
+            dan juga bercita-cita untuk mengimplementasikan ide-ide kreatif yang
+            dapat memecahkan masalah yang nyata.
           </Description>
         </motion.div>
       </div>

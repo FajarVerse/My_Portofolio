@@ -18,8 +18,7 @@ const HeroBody = () => {
             Junior Front-End Developer
           </span>{" "}
           <span className="xl:text-lg">
-            with a keen interest in developing clean and responsive web
-            interfaces.
+            dengan minat dalam mengembangkan website yang interaktif dan responsif.
           </span>
         </HeroDescription>
         <a href="#about">

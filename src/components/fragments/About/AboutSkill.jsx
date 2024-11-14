@@ -14,8 +14,9 @@ const AboutSkill = () => {
           viewport={{ once: false, amount: 0.7 }}
         >
           <Description className="lg:font-medium xl:text-lg 2xl:text-xl">
-            Here are my main technical skills. From programming languages to
-            frameworks, these are all tools that support me in every project.
+            Inilah keterampilan teknis utama saya. Mulai dari bahasa pemrograman
+            hingga framework yang saya gunakan, semua ini adalah alat yang mendukung setiap
+            proyek yang saya kerjakan
           </Description>
         </motion.div>
         <div className="w-full h-0.5 my-3 bg-accent"></div>

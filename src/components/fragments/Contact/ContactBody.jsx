@@ -16,8 +16,8 @@ const ContactBody = () => {
           Contact Me
         </Header>
         <Description className="lg:font-medium lg:text-lg lg:pr-5 ">
-          Thank you for visiting. Feel free to email, call, or fill out the
-          message form to get in touch
+          Terima kasih telah berkunjung. Jangan ragu untuk mengirim email,
+          menelepon, atau mengisi formulir pesan untuk menghubungi saya.
         </Description>
       </AnimasiFadeIn>
       <AnimasiFadeIn varian="right" delay={0.2}>
