@@ -13,9 +13,9 @@ const AboutBiography = () => {
           viewport={{ once: false, amount: 0.7 }}
         >
           <Description className="lg:font-medium lg:text-sm xl:text-base 2xl:text-lg">
-            Hai, saya Gifari Fajar Maulana, Junior Front End Web Developer yang
+            Hai, saya Gifari Fajar Maulana, Junior Web Developer yang
             sangat tertarik untuk membuat antarmuka website yang interaktif dan
-            responsive. Saya seorang mahasiswa semester tiga Politeknik LP3i
+            responsive. Saya seorang mahasiswa semester aktif Politeknik LP3i
             Jakarta.
           </Description>
         </motion.div>

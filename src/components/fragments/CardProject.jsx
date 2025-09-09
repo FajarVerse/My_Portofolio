@@ -70,9 +70,9 @@ const CardBody = (props) => {
           <SubHeader
             className={`${
               darkMode ? "text-light" : "text-primary"
-            } text-[0.95rem] mt-2 md:text-[1.1rem] lg:font-semibold lg:text-xl xl:text-[1.2rem] text-nowrap`}
+            } text-[0.95rem] mt-2 md:text-[1.1rem] lg:font-semibold lg:text-xl xl:text-[1rem] text-nowrap`}
           >
-            {children}
+            {children.slice(0, 26)} ...
           </SubHeader>
         </div>
         <div className="w-2/6 flex justify-center items-center">

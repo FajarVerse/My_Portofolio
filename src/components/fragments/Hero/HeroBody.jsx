@@ -15,7 +15,7 @@ const HeroBody = () => {
       >
         <HeroDescription>
           <span className="font-bold text-base text-accent lg:block lg:font-extrabold lg:text-3xl lg:mb-2 xl:text-4xl 2xl:text-[2.5rem]">
-            Junior Front-End Developer
+            Junior Web Developer
           </span>{" "}
           <span className="xl:text-lg">
             dengan minat dalam mengembangkan website yang interaktif dan responsif.

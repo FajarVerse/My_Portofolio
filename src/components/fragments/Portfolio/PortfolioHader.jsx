@@ -13,7 +13,7 @@ const PortfolioHeader = () => {
         className="w-full"
       >
         <Header className="text-center lg:text-6xl xl:text-7xl">
-          Latest Projects
+          Projects Experience
         </Header>
       </motion.div>
     </>
